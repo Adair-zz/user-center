@@ -40,7 +40,7 @@ public class UserController {
    * @param userRegisterRequest
    * @return
    */
-  @RequestMapping("/register")
+  @PostMapping("/register")
   public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest) {
     if (userRegisterRequest == null) {
       throw new BusinessException(ErrorCode.PARAMS_ERROR);
@@ -63,7 +63,7 @@ public class UserController {
    * @param httpServletRequest
    * @return
    */
-  @RequestMapping("/login")
+  @PostMapping("/login")
   public BaseResponse<LoginUserVO> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest httpServletRequest) {
     if (userLoginRequest == null) {
       throw new BusinessException(ErrorCode.PARAMS_ERROR);
